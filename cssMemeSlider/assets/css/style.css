@@ -52,7 +52,11 @@ header > p {
     flex-direction: column;
 }
 
-.slide img {width: 100%;height: 100%;border-radius: 1em;}
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+}
 
 .container-controls-text {
     display: flex;
@@ -86,7 +90,8 @@ input {
 }
 
 .navigation-btn {
-    border: 2px solid #de6a23;
+    border: 2px solid white;
+    background: white;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -98,24 +103,33 @@ input {
 }
 
 .navigation-btn:hover  {
-    background: #de6a23;
+    background: blue;
+    border: 2px solid blue;
+
 }
 
 .navigation-btn:focus  {
-    background: #de6a23;
+    background: white;
 }
 
-#radio1:checked ~ .container-controls-text .navigation-btn:first-child {
-    background: #de6a23;
+.navigation-btn:active  {
+    background: white;
 }
-#radio2:checked ~ .container-controls-text .navigation-btn:nth-child(2) {
-    background: #de6a23;
+
+#radio1:checked ~ .container-controls-text .navigation-btn:first-child:hover,
+#radio2:checked ~ .container-controls-text .navigation-btn:nth-child(2):hover,
+#radio3:checked ~ .container-controls-text .navigation-btn:nth-child(3):hover,
+#radio4:checked ~ .container-controls-text .navigation-btn:nth-child(4):hover  {
+    background: blue;
+    border: 2px solid blue;
 }
-#radio3:checked ~ .container-controls-text .navigation-btn:nth-child(3) {
-    background: #de6a23;
-}
-#radio4:checked ~ .container-controls-text .navigation-btn:nth-child(4) {
-    background: #de6a23;
+
+#radio1:checked ~ .container-controls-text .navigation-btn:first-child,
+#radio2:checked ~ .container-controls-text .navigation-btn:nth-child(2),
+#radio3:checked ~ .container-controls-text .navigation-btn:nth-child(3),
+#radio4:checked ~ .container-controls-text .navigation-btn:nth-child(4)  {
+    background: transparent;
+    border: 2px solid white;
 }
 
 #radio1:checked ~ .slider .first {
