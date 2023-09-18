@@ -70,7 +70,7 @@ header > p {
 .text {
     margin-top: 1em;
     height: 400%;
-    color: yellow;
+    color: white;
     letter-spacing: 0.1em;
     text-align: left;
     display: flex;
@@ -216,6 +216,7 @@ h4 {
 
     .navigation {
         margin: 0 auto;
+        z-index: 100;
     }
 
     .slider {
