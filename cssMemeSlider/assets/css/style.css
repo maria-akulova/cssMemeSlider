@@ -86,25 +86,25 @@ input {
     display: flex;
     justify-content: right;
     height: 1vh;
-    margin-top: 1em;
+    margin-top: 0.4em;
 }
 
 .navigation-btn {
-    border: 2px solid white;
+    border: 0.2em solid white;
     background: white;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 0.25em;
+    border-radius: 3em;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .navigation-btn:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 0.5em;
 }
 
 .navigation-btn:hover  {
     background: blue;
-    border: 2px solid blue;
+    border: 0.2em solid blue;
 
 }
 
@@ -121,7 +121,7 @@ input {
 #radio3:checked ~ .container-controls-text .navigation-btn:nth-child(3):hover,
 #radio4:checked ~ .container-controls-text .navigation-btn:nth-child(4):hover  {
     background: blue;
-    border: 2px solid blue;
+    border: 0.2em solid blue;
 }
 
 #radio1:checked ~ .container-controls-text .navigation-btn:first-child,
@@ -129,7 +129,7 @@ input {
 #radio3:checked ~ .container-controls-text .navigation-btn:nth-child(3),
 #radio4:checked ~ .container-controls-text .navigation-btn:nth-child(4)  {
     background: transparent;
-    border: 2px solid white;
+    /* border: 0.2em solid white; */
 }
 
 #radio1:checked ~ .slider .first {
