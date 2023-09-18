@@ -144,7 +144,6 @@ input {
     background: transparent;
     border: 0.2em solid red;
     &:hover {
-        background: white;
         border-color: white;
     }
 }
