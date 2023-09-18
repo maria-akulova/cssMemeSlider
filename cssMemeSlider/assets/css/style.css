@@ -1,8 +1,7 @@
 :root {
     --global-width: 60vw;
 }
-/* liu-jian-mao-cao-regular - latin */
-/* ma-shan-zheng-regular - latin */
+
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Ma Shan Zheng';
@@ -11,8 +10,7 @@
     src: url('../fonts/ma-shan-zheng-v10-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
-  * {
-    
+  * {    
     transition: all ease-in-out 2s;
   }
 
@@ -25,6 +23,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
 header {
     text-align: center;
 }
@@ -50,6 +49,7 @@ header > p {
     height: 30vh;
     margin: 0 auto;
 }
+
 .slider {
     overflow: hidden;
     display: flex;
@@ -106,51 +106,47 @@ input {
 
 .navigation {
     display: flex;
-    justify-content: right;
-    height: 1vh;
-    margin-top: 0.4em;
+    justify-content: space-between;
+    margin-top: 1%;
+    width: 20%;
+
 }
 
 .navigation-btn {
-    border: 0.2em solid white;
-    background: white;
-    padding: 0.3em;
-    border-radius: 3em;
+    padding: 5%;
+    height: 0.8rem;
+    width: 0.8rem;
     cursor: pointer;
-    transition: 0.5s;
+    margin:  0 auto;
 }
 
-.navigation-btn:not(:last-child) {
-    margin-right: 0.5em;
+.navigation-btn > div {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: red;
+    box-sizing: border-box;
+    margin: 0 auto;
+    transition: 0.1s;
+
 }
 
-.navigation-btn:hover  {
-    background: blue;
-    border: 0.2em solid blue;
-
-}
-
-.navigation-btn:focus  {
+.navigation-btn:hover > div,
+.navigation-btn:focus > div,
+.navigation-btn:active > div {
     background: white;
 }
 
-.navigation-btn:active  {
-    background: white;
-}
-
-#radio1:checked ~ .container-controls-text .navigation-btn:first-child:hover,
-#radio2:checked ~ .container-controls-text .navigation-btn:nth-child(2):hover,
-#radio3:checked ~ .container-controls-text .navigation-btn:nth-child(3):hover,
-#radio4:checked ~ .container-controls-text .navigation-btn:nth-child(4):hover  {
-    background: blue;
-    border: 0.2em solid blue;
-}
-
-#radio1:checked ~ .container-controls-text .navigation-btn:first-child,
-#radio2:checked ~ .container-controls-text .navigation-btn:nth-child(2),
-#radio3:checked ~ .container-controls-text .navigation-btn:nth-child(3),
-#radio4:checked ~ .container-controls-text .navigation-btn:nth-child(4)  {
+#radio1:checked ~ .container-controls-text .navigation-btn:first-child > div,
+#radio2:checked ~ .container-controls-text .navigation-btn:nth-child(2)> div,
+#radio3:checked ~ .container-controls-text .navigation-btn:nth-child(3)> div,
+#radio4:checked ~ .container-controls-text .navigation-btn:nth-child(4)> div  {
     background: transparent;
+    border: 0.2em solid red;
+    &:hover {
+        background: white;
+        border-color: white;
+    }
 }
 
 #radio1:checked ~ .slider .first {
